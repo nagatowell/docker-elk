@@ -1,0 +1,1260 @@
+[2017-06-27 09:21:51] local.ERROR: PDOException: could not find driver in /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:68
+Stack trace:
+#0 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(68): PDO->__construct('mysql:host=psy-...', 'desenv', 'psyDesenv@2016@', Array)
+#1 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(43): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=psy-...', 'desenv', 'psyDesenv@2016@', Array)
+#2 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=psy-...', Array, Array)
+#3 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(183): Illuminate\Database\Connectors\MySqlConnector->connect(Array)
+#4 [internal function]: Illuminate\Database\Connectors\ConnectionFactory->Illuminate\Database\Connectors\{closure}()
+#5 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(883): call_user_func(Object(Closure))
+#6 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(904): Illuminate\Database\Connection->getPdo()
+#7 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(392): Illuminate\Database\Connection->getReadPdo()
+#8 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(318): Illuminate\Database\Connection->getPdoForSelect(true)
+#9 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(640): Illuminate\Database\Connection->Illuminate\Database\{closure}('select count(*)...', Array)
+#10 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(607): Illuminate\Database\Connection->runQueryCallback('select count(*)...', Array, Object(Closure))
+#11 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(326): Illuminate\Database\Connection->run('select count(*)...', Array, Object(Closure))
+#12 /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositoryDashboard.php(9): Illuminate\Database\Connection->select('select count(*)...')
+#13 /home/psychemedic-nagato/Psy/psyBi/app/Console/Commands/dashboardFirebase.php(48): App\Repository\RepositoryDashboard->pagamentosAbertos()
+#14 [internal function]: App\Console\Commands\dashboardFirebase->handle()
+#15 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#16 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#17 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Illuminate\Foundation\Application), Array, Object(Closure))
+#18 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/Container.php(539): Illuminate\Container\BoundMethod::call(Object(Illuminate\Foundation\Application), Array, Array, NULL)
+#19 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Illuminate\Container\Container->call(Array)
+#20 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Command/Command.php(264): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#21 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(167): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#22 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(869): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#23 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(223): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\dashboardFirebase), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#24 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(130): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#25 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#26 /home/psychemedic-nagato/Psy/psyBi/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#27 {main}  
+[2017-06-27 09:21:51] local.ERROR: PDOException: could not find driver in /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:68
+Stack trace:
+#0 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(68): PDO->__construct('mysql:host=psy-...', 'desenv', 'psyDesenv@2016@', Array)
+#1 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(43): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=psy-...', 'desenv', 'psyDesenv@2016@', Array)
+#2 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=psy-...', Array, Array)
+#3 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(183): Illuminate\Database\Connectors\MySqlConnector->connect(Array)
+#4 [internal function]: Illuminate\Database\Connectors\ConnectionFactory->Illuminate\Database\Connectors\{closure}()
+#5 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(883): call_user_func(Object(Closure))
+#6 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(904): Illuminate\Database\Connection->getPdo()
+#7 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(392): Illuminate\Database\Connection->getReadPdo()
+#8 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(318): Illuminate\Database\Connection->getPdoForSelect(true)
+#9 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(640): Illuminate\Database\Connection->Illuminate\Database\{closure}('select count(*)...', Array)
+#10 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(607): Illuminate\Database\Connection->runQueryCallback('select count(*)...', Array, Object(Closure))
+#11 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(326): Illuminate\Database\Connection->run('select count(*)...', Array, Object(Closure))
+#12 /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositoryDashboard.php(9): Illuminate\Database\Connection->select('select count(*)...')
+#13 /home/psychemedic-nagato/Psy/psyBi/app/Console/Commands/dashboardFirebase.php(48): App\Repository\RepositoryDashboard->pagamentosAbertos()
+#14 [internal function]: App\Console\Commands\dashboardFirebase->handle()
+#15 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#16 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#17 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Illuminate\Foundation\Application), Array, Object(Closure))
+#18 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/Container.php(539): Illuminate\Container\BoundMethod::call(Object(Illuminate\Foundation\Application), Array, Array, NULL)
+#19 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Illuminate\Container\Container->call(Array)
+#20 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Command/Command.php(264): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#21 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(167): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#22 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(869): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#23 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(223): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\dashboardFirebase), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#24 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(130): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#25 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#26 /home/psychemedic-nagato/Psy/psyBi/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#27 {main}
+
+Next Illuminate\Database\QueryException: could not find driver (SQL: select count(*) as total from azoprfrm 
+                where VdaPedIndPed = 'A' 
+                and (VdaPedFormPgto = 'B' or VdaPedFormPgto = 'C') 
+                and OprFrmStatus = 'A') in /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php:647
+Stack trace:
+#0 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(607): Illuminate\Database\Connection->runQueryCallback('select count(*)...', Array, Object(Closure))
+#1 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(326): Illuminate\Database\Connection->run('select count(*)...', Array, Object(Closure))
+#2 /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositoryDashboard.php(9): Illuminate\Database\Connection->select('select count(*)...')
+#3 /home/psychemedic-nagato/Psy/psyBi/app/Console/Commands/dashboardFirebase.php(48): App\Repository\RepositoryDashboard->pagamentosAbertos()
+#4 [internal function]: App\Console\Commands\dashboardFirebase->handle()
+#5 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#6 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#7 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Illuminate\Foundation\Application), Array, Object(Closure))
+#8 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/Container.php(539): Illuminate\Container\BoundMethod::call(Object(Illuminate\Foundation\Application), Array, Array, NULL)
+#9 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Illuminate\Container\Container->call(Array)
+#10 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Command/Command.php(264): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#11 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(167): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#12 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(869): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(223): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\dashboardFirebase), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(130): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 /home/psychemedic-nagato/Psy/psyBi/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 {main}  
+[2017-06-27 09:28:57] local.ERROR: ErrorException: Extension CURL is not loaded. in /home/psychemedic-nagato/Psy/psyBi/vendor/ktamas77/firebase-php/src/firebaseLib.php:43
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(256, 'Extension CURL ...', '/home/psychemed...', 43, Array)
+#1 /home/psychemedic-nagato/Psy/psyBi/vendor/ktamas77/firebase-php/src/firebaseLib.php(43): trigger_error('Extension CURL ...', 256)
+#2 /home/psychemedic-nagato/Psy/psyBi/app/Console/Commands/dashboardFirebase.php(64): Firebase\FirebaseLib->__construct('https://dashbip...', 'tesFyAdc0Zri0sZ...')
+#3 /home/psychemedic-nagato/Psy/psyBi/app/Console/Commands/dashboardFirebase.php(55): App\Console\Commands\dashboardFirebase->firebase(Array)
+#4 [internal function]: App\Console\Commands\dashboardFirebase->handle()
+#5 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#6 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#7 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Illuminate\Foundation\Application), Array, Object(Closure))
+#8 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/Container.php(539): Illuminate\Container\BoundMethod::call(Object(Illuminate\Foundation\Application), Array, Array, NULL)
+#9 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Illuminate\Container\Container->call(Array)
+#10 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Command/Command.php(264): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#11 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(167): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#12 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(869): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(223): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\dashboardFirebase), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(130): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 /home/psychemedic-nagato/Psy/psyBi/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 {main}  
+[2017-06-27 09:33:12] local.ERROR: PDOException: SQLSTATE[HY000] [1045] Access denied for user 'wellington'@'177.102.141.170' (using password: YES) in /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:68
+Stack trace:
+#0 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(68): PDO->__construct('mysql:host=psy-...', 'wellington', '340208', Array)
+#1 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(43): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=psy-...', 'wellington', '340208', Array)
+#2 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=psy-...', Array, Array)
+#3 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(183): Illuminate\Database\Connectors\MySqlConnector->connect(Array)
+#4 [internal function]: Illuminate\Database\Connectors\ConnectionFactory->Illuminate\Database\Connectors\{closure}()
+#5 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(883): call_user_func(Object(Closure))
+#6 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(904): Illuminate\Database\Connection->getPdo()
+#7 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(392): Illuminate\Database\Connection->getReadPdo()
+#8 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(318): Illuminate\Database\Connection->getPdoForSelect(true)
+#9 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(640): Illuminate\Database\Connection->Illuminate\Database\{closure}('select count(*)...', Array)
+#10 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(607): Illuminate\Database\Connection->runQueryCallback('select count(*)...', Array, Object(Closure))
+#11 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(326): Illuminate\Database\Connection->run('select count(*)...', Array, Object(Closure))
+#12 /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositoryDashboard.php(9): Illuminate\Database\Connection->select('select count(*)...')
+#13 /home/psychemedic-nagato/Psy/psyBi/app/Console/Commands/dashboardFirebase.php(48): App\Repository\RepositoryDashboard->pagamentosAbertos()
+#14 [internal function]: App\Console\Commands\dashboardFirebase->handle()
+#15 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#16 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#17 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Illuminate\Foundation\Application), Array, Object(Closure))
+#18 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/Container.php(539): Illuminate\Container\BoundMethod::call(Object(Illuminate\Foundation\Application), Array, Array, NULL)
+#19 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Illuminate\Container\Container->call(Array)
+#20 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Command/Command.php(264): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#21 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(167): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#22 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(869): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#23 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(223): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\dashboardFirebase), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#24 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(130): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#25 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#26 /home/psychemedic-nagato/Psy/psyBi/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#27 {main}  
+[2017-06-27 09:33:12] local.ERROR: PDOException: SQLSTATE[HY000] [1045] Access denied for user 'wellington'@'177.102.141.170' (using password: YES) in /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:68
+Stack trace:
+#0 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(68): PDO->__construct('mysql:host=psy-...', 'wellington', '340208', Array)
+#1 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(43): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=psy-...', 'wellington', '340208', Array)
+#2 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=psy-...', Array, Array)
+#3 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(183): Illuminate\Database\Connectors\MySqlConnector->connect(Array)
+#4 [internal function]: Illuminate\Database\Connectors\ConnectionFactory->Illuminate\Database\Connectors\{closure}()
+#5 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(883): call_user_func(Object(Closure))
+#6 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(904): Illuminate\Database\Connection->getPdo()
+#7 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(392): Illuminate\Database\Connection->getReadPdo()
+#8 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(318): Illuminate\Database\Connection->getPdoForSelect(true)
+#9 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(640): Illuminate\Database\Connection->Illuminate\Database\{closure}('select count(*)...', Array)
+#10 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(607): Illuminate\Database\Connection->runQueryCallback('select count(*)...', Array, Object(Closure))
+#11 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(326): Illuminate\Database\Connection->run('select count(*)...', Array, Object(Closure))
+#12 /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositoryDashboard.php(9): Illuminate\Database\Connection->select('select count(*)...')
+#13 /home/psychemedic-nagato/Psy/psyBi/app/Console/Commands/dashboardFirebase.php(48): App\Repository\RepositoryDashboard->pagamentosAbertos()
+#14 [internal function]: App\Console\Commands\dashboardFirebase->handle()
+#15 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#16 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#17 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Illuminate\Foundation\Application), Array, Object(Closure))
+#18 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/Container.php(539): Illuminate\Container\BoundMethod::call(Object(Illuminate\Foundation\Application), Array, Array, NULL)
+#19 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Illuminate\Container\Container->call(Array)
+#20 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Command/Command.php(264): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#21 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(167): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#22 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(869): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#23 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(223): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\dashboardFirebase), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#24 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(130): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#25 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#26 /home/psychemedic-nagato/Psy/psyBi/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#27 {main}
+
+Next Illuminate\Database\QueryException: SQLSTATE[HY000] [1045] Access denied for user 'wellington'@'177.102.141.170' (using password: YES) (SQL: select count(*) as total from azoprfrm 
+                where VdaPedIndPed = 'A' 
+                and (VdaPedFormPgto = 'B' or VdaPedFormPgto = 'C') 
+                and OprFrmStatus = 'A') in /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php:647
+Stack trace:
+#0 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(607): Illuminate\Database\Connection->runQueryCallback('select count(*)...', Array, Object(Closure))
+#1 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(326): Illuminate\Database\Connection->run('select count(*)...', Array, Object(Closure))
+#2 /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositoryDashboard.php(9): Illuminate\Database\Connection->select('select count(*)...')
+#3 /home/psychemedic-nagato/Psy/psyBi/app/Console/Commands/dashboardFirebase.php(48): App\Repository\RepositoryDashboard->pagamentosAbertos()
+#4 [internal function]: App\Console\Commands\dashboardFirebase->handle()
+#5 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#6 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#7 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Illuminate\Foundation\Application), Array, Object(Closure))
+#8 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/Container.php(539): Illuminate\Container\BoundMethod::call(Object(Illuminate\Foundation\Application), Array, Array, NULL)
+#9 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Illuminate\Container\Container->call(Array)
+#10 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Command/Command.php(264): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#11 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(167): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#12 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(869): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(223): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\dashboardFirebase), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(130): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 /home/psychemedic-nagato/Psy/psyBi/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 {main}  
+[2017-06-27 09:33:33] local.ERROR: PDOException: SQLSTATE[HY000] [1045] Access denied for user 'wellington'@'177.102.141.170' (using password: YES) in /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:68
+Stack trace:
+#0 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(68): PDO->__construct('mysql:host=psy-...', 'wellington', '743690', Array)
+#1 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(43): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=psy-...', 'wellington', '743690', Array)
+#2 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=psy-...', Array, Array)
+#3 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(183): Illuminate\Database\Connectors\MySqlConnector->connect(Array)
+#4 [internal function]: Illuminate\Database\Connectors\ConnectionFactory->Illuminate\Database\Connectors\{closure}()
+#5 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(883): call_user_func(Object(Closure))
+#6 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(904): Illuminate\Database\Connection->getPdo()
+#7 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(392): Illuminate\Database\Connection->getReadPdo()
+#8 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(318): Illuminate\Database\Connection->getPdoForSelect(true)
+#9 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(640): Illuminate\Database\Connection->Illuminate\Database\{closure}('select count(*)...', Array)
+#10 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(607): Illuminate\Database\Connection->runQueryCallback('select count(*)...', Array, Object(Closure))
+#11 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(326): Illuminate\Database\Connection->run('select count(*)...', Array, Object(Closure))
+#12 /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositoryDashboard.php(9): Illuminate\Database\Connection->select('select count(*)...')
+#13 /home/psychemedic-nagato/Psy/psyBi/app/Console/Commands/dashboardFirebase.php(48): App\Repository\RepositoryDashboard->pagamentosAbertos()
+#14 [internal function]: App\Console\Commands\dashboardFirebase->handle()
+#15 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#16 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#17 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Illuminate\Foundation\Application), Array, Object(Closure))
+#18 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/Container.php(539): Illuminate\Container\BoundMethod::call(Object(Illuminate\Foundation\Application), Array, Array, NULL)
+#19 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Illuminate\Container\Container->call(Array)
+#20 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Command/Command.php(264): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#21 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(167): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#22 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(869): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#23 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(223): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\dashboardFirebase), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#24 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(130): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#25 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#26 /home/psychemedic-nagato/Psy/psyBi/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#27 {main}  
+[2017-06-27 09:33:33] local.ERROR: PDOException: SQLSTATE[HY000] [1045] Access denied for user 'wellington'@'177.102.141.170' (using password: YES) in /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:68
+Stack trace:
+#0 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(68): PDO->__construct('mysql:host=psy-...', 'wellington', '743690', Array)
+#1 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(43): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=psy-...', 'wellington', '743690', Array)
+#2 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=psy-...', Array, Array)
+#3 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(183): Illuminate\Database\Connectors\MySqlConnector->connect(Array)
+#4 [internal function]: Illuminate\Database\Connectors\ConnectionFactory->Illuminate\Database\Connectors\{closure}()
+#5 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(883): call_user_func(Object(Closure))
+#6 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(904): Illuminate\Database\Connection->getPdo()
+#7 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(392): Illuminate\Database\Connection->getReadPdo()
+#8 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(318): Illuminate\Database\Connection->getPdoForSelect(true)
+#9 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(640): Illuminate\Database\Connection->Illuminate\Database\{closure}('select count(*)...', Array)
+#10 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(607): Illuminate\Database\Connection->runQueryCallback('select count(*)...', Array, Object(Closure))
+#11 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(326): Illuminate\Database\Connection->run('select count(*)...', Array, Object(Closure))
+#12 /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositoryDashboard.php(9): Illuminate\Database\Connection->select('select count(*)...')
+#13 /home/psychemedic-nagato/Psy/psyBi/app/Console/Commands/dashboardFirebase.php(48): App\Repository\RepositoryDashboard->pagamentosAbertos()
+#14 [internal function]: App\Console\Commands\dashboardFirebase->handle()
+#15 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#16 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#17 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Illuminate\Foundation\Application), Array, Object(Closure))
+#18 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/Container.php(539): Illuminate\Container\BoundMethod::call(Object(Illuminate\Foundation\Application), Array, Array, NULL)
+#19 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Illuminate\Container\Container->call(Array)
+#20 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Command/Command.php(264): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#21 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(167): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#22 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(869): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#23 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(223): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\dashboardFirebase), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#24 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(130): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#25 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#26 /home/psychemedic-nagato/Psy/psyBi/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#27 {main}
+
+Next Illuminate\Database\QueryException: SQLSTATE[HY000] [1045] Access denied for user 'wellington'@'177.102.141.170' (using password: YES) (SQL: select count(*) as total from azoprfrm 
+                where VdaPedIndPed = 'A' 
+                and (VdaPedFormPgto = 'B' or VdaPedFormPgto = 'C') 
+                and OprFrmStatus = 'A') in /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php:647
+Stack trace:
+#0 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(607): Illuminate\Database\Connection->runQueryCallback('select count(*)...', Array, Object(Closure))
+#1 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(326): Illuminate\Database\Connection->run('select count(*)...', Array, Object(Closure))
+#2 /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositoryDashboard.php(9): Illuminate\Database\Connection->select('select count(*)...')
+#3 /home/psychemedic-nagato/Psy/psyBi/app/Console/Commands/dashboardFirebase.php(48): App\Repository\RepositoryDashboard->pagamentosAbertos()
+#4 [internal function]: App\Console\Commands\dashboardFirebase->handle()
+#5 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#6 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#7 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Illuminate\Foundation\Application), Array, Object(Closure))
+#8 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/Container.php(539): Illuminate\Container\BoundMethod::call(Object(Illuminate\Foundation\Application), Array, Array, NULL)
+#9 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Illuminate\Container\Container->call(Array)
+#10 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Command/Command.php(264): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#11 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(167): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#12 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(869): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(223): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\dashboardFirebase), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(130): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 /home/psychemedic-nagato/Psy/psyBi/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 {main}  
+[2017-06-27 09:33:55] local.ERROR: PDOException: SQLSTATE[HY000] [1045] Access denied for user 'wellington'@'177.102.141.170' (using password: YES) in /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:68
+Stack trace:
+#0 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(68): PDO->__construct('mysql:host=psy-...', 'wellington', '743690', Array)
+#1 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(43): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=psy-...', 'wellington', '743690', Array)
+#2 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=psy-...', Array, Array)
+#3 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(183): Illuminate\Database\Connectors\MySqlConnector->connect(Array)
+#4 [internal function]: Illuminate\Database\Connectors\ConnectionFactory->Illuminate\Database\Connectors\{closure}()
+#5 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(883): call_user_func(Object(Closure))
+#6 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(904): Illuminate\Database\Connection->getPdo()
+#7 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(392): Illuminate\Database\Connection->getReadPdo()
+#8 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(318): Illuminate\Database\Connection->getPdoForSelect(true)
+#9 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(640): Illuminate\Database\Connection->Illuminate\Database\{closure}('select count(*)...', Array)
+#10 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(607): Illuminate\Database\Connection->runQueryCallback('select count(*)...', Array, Object(Closure))
+#11 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(326): Illuminate\Database\Connection->run('select count(*)...', Array, Object(Closure))
+#12 /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositoryDashboard.php(9): Illuminate\Database\Connection->select('select count(*)...')
+#13 /home/psychemedic-nagato/Psy/psyBi/app/Console/Commands/dashboardFirebase.php(48): App\Repository\RepositoryDashboard->pagamentosAbertos()
+#14 [internal function]: App\Console\Commands\dashboardFirebase->handle()
+#15 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#16 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#17 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Illuminate\Foundation\Application), Array, Object(Closure))
+#18 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/Container.php(539): Illuminate\Container\BoundMethod::call(Object(Illuminate\Foundation\Application), Array, Array, NULL)
+#19 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Illuminate\Container\Container->call(Array)
+#20 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Command/Command.php(264): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#21 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(167): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#22 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(869): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#23 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(223): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\dashboardFirebase), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#24 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(130): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#25 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#26 /home/psychemedic-nagato/Psy/psyBi/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#27 {main}  
+[2017-06-27 09:33:55] local.ERROR: PDOException: SQLSTATE[HY000] [1045] Access denied for user 'wellington'@'177.102.141.170' (using password: YES) in /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:68
+Stack trace:
+#0 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(68): PDO->__construct('mysql:host=psy-...', 'wellington', '743690', Array)
+#1 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(43): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=psy-...', 'wellington', '743690', Array)
+#2 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=psy-...', Array, Array)
+#3 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(183): Illuminate\Database\Connectors\MySqlConnector->connect(Array)
+#4 [internal function]: Illuminate\Database\Connectors\ConnectionFactory->Illuminate\Database\Connectors\{closure}()
+#5 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(883): call_user_func(Object(Closure))
+#6 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(904): Illuminate\Database\Connection->getPdo()
+#7 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(392): Illuminate\Database\Connection->getReadPdo()
+#8 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(318): Illuminate\Database\Connection->getPdoForSelect(true)
+#9 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(640): Illuminate\Database\Connection->Illuminate\Database\{closure}('select count(*)...', Array)
+#10 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(607): Illuminate\Database\Connection->runQueryCallback('select count(*)...', Array, Object(Closure))
+#11 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(326): Illuminate\Database\Connection->run('select count(*)...', Array, Object(Closure))
+#12 /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositoryDashboard.php(9): Illuminate\Database\Connection->select('select count(*)...')
+#13 /home/psychemedic-nagato/Psy/psyBi/app/Console/Commands/dashboardFirebase.php(48): App\Repository\RepositoryDashboard->pagamentosAbertos()
+#14 [internal function]: App\Console\Commands\dashboardFirebase->handle()
+#15 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#16 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#17 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Illuminate\Foundation\Application), Array, Object(Closure))
+#18 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/Container.php(539): Illuminate\Container\BoundMethod::call(Object(Illuminate\Foundation\Application), Array, Array, NULL)
+#19 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Illuminate\Container\Container->call(Array)
+#20 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Command/Command.php(264): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#21 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(167): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#22 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(869): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#23 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(223): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\dashboardFirebase), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#24 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(130): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#25 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#26 /home/psychemedic-nagato/Psy/psyBi/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#27 {main}
+
+Next Illuminate\Database\QueryException: SQLSTATE[HY000] [1045] Access denied for user 'wellington'@'177.102.141.170' (using password: YES) (SQL: select count(*) as total from azoprfrm 
+                where VdaPedIndPed = 'A' 
+                and (VdaPedFormPgto = 'B' or VdaPedFormPgto = 'C') 
+                and OprFrmStatus = 'A') in /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php:647
+Stack trace:
+#0 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(607): Illuminate\Database\Connection->runQueryCallback('select count(*)...', Array, Object(Closure))
+#1 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(326): Illuminate\Database\Connection->run('select count(*)...', Array, Object(Closure))
+#2 /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositoryDashboard.php(9): Illuminate\Database\Connection->select('select count(*)...')
+#3 /home/psychemedic-nagato/Psy/psyBi/app/Console/Commands/dashboardFirebase.php(48): App\Repository\RepositoryDashboard->pagamentosAbertos()
+#4 [internal function]: App\Console\Commands\dashboardFirebase->handle()
+#5 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#6 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#7 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Illuminate\Foundation\Application), Array, Object(Closure))
+#8 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/Container.php(539): Illuminate\Container\BoundMethod::call(Object(Illuminate\Foundation\Application), Array, Array, NULL)
+#9 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Illuminate\Container\Container->call(Array)
+#10 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Command/Command.php(264): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#11 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(167): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#12 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(869): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(223): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\dashboardFirebase), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(130): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 /home/psychemedic-nagato/Psy/psyBi/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 {main}  
+[2017-06-27 12:03:55] local.NOTICE: Rotina SMS Inteligencia finalizado com sucesso  
+[2017-06-27 12:05:50] local.NOTICE: Rotina SMS Inteligencia finalizado com sucesso  
+[2017-06-27 13:06:18] local.NOTICE: Atualizando os calculos pagamento  
+[2017-06-27 15:07:12] local.ERROR: PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')
+                and OprFrmStatus = 'A'' at line 3 in /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php:319
+Stack trace:
+#0 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(319): PDO->prepare('select count(*)...')
+#1 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(640): Illuminate\Database\Connection->Illuminate\Database\{closure}('select count(*)...', Array)
+#2 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(607): Illuminate\Database\Connection->runQueryCallback('select count(*)...', Array, Object(Closure))
+#3 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(326): Illuminate\Database\Connection->run('select count(*)...', Array, Object(Closure))
+#4 /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositoryDashboard.php(9): Illuminate\Database\Connection->select('select count(*)...')
+#5 /home/psychemedic-nagato/Psy/psyBi/app/Console/Commands/dashboardFirebase.php(49): App\Repository\RepositoryDashboard->pagamentosAbertosCartao()
+#6 [internal function]: App\Console\Commands\dashboardFirebase->handle()
+#7 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#8 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#9 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Illuminate\Foundation\Application), Array, Object(Closure))
+#10 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/Container.php(539): Illuminate\Container\BoundMethod::call(Object(Illuminate\Foundation\Application), Array, Array, NULL)
+#11 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Illuminate\Container\Container->call(Array)
+#12 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Command/Command.php(264): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#13 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(167): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#14 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(869): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(223): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\dashboardFirebase), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(130): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 /home/psychemedic-nagato/Psy/psyBi/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 {main}
+
+Next Illuminate\Database\QueryException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')
+                and OprFrmStatus = 'A'' at line 3 (SQL: select count(*) as total from azoprfrm 
+                where VdaPedIndPed = 'A' 
+                and VdaPedFormPgto = 'C')
+                and OprFrmStatus = 'A') in /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php:647
+Stack trace:
+#0 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(607): Illuminate\Database\Connection->runQueryCallback('select count(*)...', Array, Object(Closure))
+#1 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(326): Illuminate\Database\Connection->run('select count(*)...', Array, Object(Closure))
+#2 /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositoryDashboard.php(9): Illuminate\Database\Connection->select('select count(*)...')
+#3 /home/psychemedic-nagato/Psy/psyBi/app/Console/Commands/dashboardFirebase.php(49): App\Repository\RepositoryDashboard->pagamentosAbertosCartao()
+#4 [internal function]: App\Console\Commands\dashboardFirebase->handle()
+#5 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#6 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#7 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Illuminate\Foundation\Application), Array, Object(Closure))
+#8 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/Container.php(539): Illuminate\Container\BoundMethod::call(Object(Illuminate\Foundation\Application), Array, Array, NULL)
+#9 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Illuminate\Container\Container->call(Array)
+#10 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Command/Command.php(264): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#11 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(167): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#12 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(869): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(223): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\dashboardFirebase), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(130): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 /home/psychemedic-nagato/Psy/psyBi/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 {main}  
+[2017-06-27 15:26:00] local.ERROR: PDOException: PDO::__construct(): php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:68
+Stack trace:
+#0 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(68): PDO->__construct('mysql:host=psy-...', 'wellington', '340208', Array)
+#1 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(43): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=psy-...', 'wellington', '340208', Array)
+#2 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=psy-...', Array, Array)
+#3 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(183): Illuminate\Database\Connectors\MySqlConnector->connect(Array)
+#4 [internal function]: Illuminate\Database\Connectors\ConnectionFactory->Illuminate\Database\Connectors\{closure}()
+#5 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(883): call_user_func(Object(Closure))
+#6 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(904): Illuminate\Database\Connection->getPdo()
+#7 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(392): Illuminate\Database\Connection->getReadPdo()
+#8 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(318): Illuminate\Database\Connection->getPdoForSelect(true)
+#9 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(640): Illuminate\Database\Connection->Illuminate\Database\{closure}('select count(*)...', Array)
+#10 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(607): Illuminate\Database\Connection->runQueryCallback('select count(*)...', Array, Object(Closure))
+#11 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(326): Illuminate\Database\Connection->run('select count(*)...', Array, Object(Closure))
+#12 /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositoryDashboard.php(29): Illuminate\Database\Connection->select('select count(*)...')
+#13 /home/psychemedic-nagato/Psy/psyBi/app/Console/Commands/dashboardFirebase.php(48): App\Repository\RepositoryDashboard->pagamentosAbertosBoleto()
+#14 [internal function]: App\Console\Commands\dashboardFirebase->handle()
+#15 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#16 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#17 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Illuminate\Foundation\Application), Array, Object(Closure))
+#18 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/Container.php(539): Illuminate\Container\BoundMethod::call(Object(Illuminate\Foundation\Application), Array, Array, NULL)
+#19 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Illuminate\Container\Container->call(Array)
+#20 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Command/Command.php(264): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#21 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(167): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#22 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(869): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#23 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(223): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\dashboardFirebase), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#24 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(130): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#25 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#26 /home/psychemedic-nagato/Psy/psyBi/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#27 {main}
+
+Next PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:68
+Stack trace:
+#0 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(68): PDO->__construct('mysql:host=psy-...', 'wellington', '340208', Array)
+#1 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(43): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=psy-...', 'wellington', '340208', Array)
+#2 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=psy-...', Array, Array)
+#3 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(183): Illuminate\Database\Connectors\MySqlConnector->connect(Array)
+#4 [internal function]: Illuminate\Database\Connectors\ConnectionFactory->Illuminate\Database\Connectors\{closure}()
+#5 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(883): call_user_func(Object(Closure))
+#6 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(904): Illuminate\Database\Connection->getPdo()
+#7 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(392): Illuminate\Database\Connection->getReadPdo()
+#8 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(318): Illuminate\Database\Connection->getPdoForSelect(true)
+#9 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(640): Illuminate\Database\Connection->Illuminate\Database\{closure}('select count(*)...', Array)
+#10 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(607): Illuminate\Database\Connection->runQueryCallback('select count(*)...', Array, Object(Closure))
+#11 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(326): Illuminate\Database\Connection->run('select count(*)...', Array, Object(Closure))
+#12 /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositoryDashboard.php(29): Illuminate\Database\Connection->select('select count(*)...')
+#13 /home/psychemedic-nagato/Psy/psyBi/app/Console/Commands/dashboardFirebase.php(48): App\Repository\RepositoryDashboard->pagamentosAbertosBoleto()
+#14 [internal function]: App\Console\Commands\dashboardFirebase->handle()
+#15 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#16 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#17 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Illuminate\Foundation\Application), Array, Object(Closure))
+#18 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/Container.php(539): Illuminate\Container\BoundMethod::call(Object(Illuminate\Foundation\Application), Array, Array, NULL)
+#19 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Illuminate\Container\Container->call(Array)
+#20 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Command/Command.php(264): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#21 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(167): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#22 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(869): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#23 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(223): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\dashboardFirebase), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#24 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(130): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#25 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#26 /home/psychemedic-nagato/Psy/psyBi/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#27 {main}  
+[2017-06-27 15:26:00] local.ERROR: PDOException: PDO::__construct(): php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:68
+Stack trace:
+#0 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(68): PDO->__construct('mysql:host=psy-...', 'wellington', '340208', Array)
+#1 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(43): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=psy-...', 'wellington', '340208', Array)
+#2 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=psy-...', Array, Array)
+#3 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(183): Illuminate\Database\Connectors\MySqlConnector->connect(Array)
+#4 [internal function]: Illuminate\Database\Connectors\ConnectionFactory->Illuminate\Database\Connectors\{closure}()
+#5 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(883): call_user_func(Object(Closure))
+#6 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(904): Illuminate\Database\Connection->getPdo()
+#7 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(392): Illuminate\Database\Connection->getReadPdo()
+#8 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(318): Illuminate\Database\Connection->getPdoForSelect(true)
+#9 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(640): Illuminate\Database\Connection->Illuminate\Database\{closure}('select count(*)...', Array)
+#10 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(607): Illuminate\Database\Connection->runQueryCallback('select count(*)...', Array, Object(Closure))
+#11 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(326): Illuminate\Database\Connection->run('select count(*)...', Array, Object(Closure))
+#12 /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositoryDashboard.php(29): Illuminate\Database\Connection->select('select count(*)...')
+#13 /home/psychemedic-nagato/Psy/psyBi/app/Console/Commands/dashboardFirebase.php(48): App\Repository\RepositoryDashboard->pagamentosAbertosBoleto()
+#14 [internal function]: App\Console\Commands\dashboardFirebase->handle()
+#15 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#16 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#17 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Illuminate\Foundation\Application), Array, Object(Closure))
+#18 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/Container.php(539): Illuminate\Container\BoundMethod::call(Object(Illuminate\Foundation\Application), Array, Array, NULL)
+#19 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Illuminate\Container\Container->call(Array)
+#20 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Command/Command.php(264): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#21 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(167): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#22 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(869): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#23 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(223): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\dashboardFirebase), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#24 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(130): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#25 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#26 /home/psychemedic-nagato/Psy/psyBi/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#27 {main}
+
+Next PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution in /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:68
+Stack trace:
+#0 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(68): PDO->__construct('mysql:host=psy-...', 'wellington', '340208', Array)
+#1 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(43): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=psy-...', 'wellington', '340208', Array)
+#2 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=psy-...', Array, Array)
+#3 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(183): Illuminate\Database\Connectors\MySqlConnector->connect(Array)
+#4 [internal function]: Illuminate\Database\Connectors\ConnectionFactory->Illuminate\Database\Connectors\{closure}()
+#5 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(883): call_user_func(Object(Closure))
+#6 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(904): Illuminate\Database\Connection->getPdo()
+#7 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(392): Illuminate\Database\Connection->getReadPdo()
+#8 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(318): Illuminate\Database\Connection->getPdoForSelect(true)
+#9 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(640): Illuminate\Database\Connection->Illuminate\Database\{closure}('select count(*)...', Array)
+#10 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(607): Illuminate\Database\Connection->runQueryCallback('select count(*)...', Array, Object(Closure))
+#11 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(326): Illuminate\Database\Connection->run('select count(*)...', Array, Object(Closure))
+#12 /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositoryDashboard.php(29): Illuminate\Database\Connection->select('select count(*)...')
+#13 /home/psychemedic-nagato/Psy/psyBi/app/Console/Commands/dashboardFirebase.php(48): App\Repository\RepositoryDashboard->pagamentosAbertosBoleto()
+#14 [internal function]: App\Console\Commands\dashboardFirebase->handle()
+#15 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#16 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#17 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Illuminate\Foundation\Application), Array, Object(Closure))
+#18 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/Container.php(539): Illuminate\Container\BoundMethod::call(Object(Illuminate\Foundation\Application), Array, Array, NULL)
+#19 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Illuminate\Container\Container->call(Array)
+#20 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Command/Command.php(264): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#21 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(167): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#22 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(869): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#23 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(223): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\dashboardFirebase), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#24 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(130): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#25 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#26 /home/psychemedic-nagato/Psy/psyBi/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#27 {main}
+
+Next Illuminate\Database\QueryException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution (SQL: select count(*) as total from azoprfrm 
+                where VdaPedIndPed = 'A' 
+                and VdaPedFormPgto = 'B'
+                and OprFrmStatus = 'A'
+                and OprFrmDtHrIncl LIKE '2017-06-27%'
+                ) in /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php:647
+Stack trace:
+#0 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(607): Illuminate\Database\Connection->runQueryCallback('select count(*)...', Array, Object(Closure))
+#1 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(326): Illuminate\Database\Connection->run('select count(*)...', Array, Object(Closure))
+#2 /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositoryDashboard.php(29): Illuminate\Database\Connection->select('select count(*)...')
+#3 /home/psychemedic-nagato/Psy/psyBi/app/Console/Commands/dashboardFirebase.php(48): App\Repository\RepositoryDashboard->pagamentosAbertosBoleto()
+#4 [internal function]: App\Console\Commands\dashboardFirebase->handle()
+#5 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#6 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#7 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Illuminate\Foundation\Application), Array, Object(Closure))
+#8 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/Container.php(539): Illuminate\Container\BoundMethod::call(Object(Illuminate\Foundation\Application), Array, Array, NULL)
+#9 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Illuminate\Container\Container->call(Array)
+#10 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Command/Command.php(264): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#11 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(167): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#12 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(869): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(223): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\dashboardFirebase), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(130): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 /home/psychemedic-nagato/Psy/psyBi/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 {main}  
+[2017-06-27 15:59:01] local.NOTICE: Inciando processo de envio de sms: 5 pendentes  
+[2017-06-27 15:59:01] local.DEBUG: Numero de celular com menos de 12 caracteres = 1   
+[2017-06-27 15:59:01] local.ERROR: ErrorException: Undefined variable: contentJson in /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositorySms.php:117
+Stack trace:
+#0 /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositorySms.php(117): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Undefined varia...', '/home/psychemed...', 117, Array)
+#1 /home/psychemedic-nagato/Psy/psyBi/app/Console/Commands/smsEnvia.php(54): App\Repository\RepositorySms->sendMessage(Array)
+#2 [internal function]: App\Console\Commands\smsEnvia->handle()
+#3 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#4 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#5 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Illuminate\Foundation\Application), Array, Object(Closure))
+#6 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/Container.php(539): Illuminate\Container\BoundMethod::call(Object(Illuminate\Foundation\Application), Array, Array, NULL)
+#7 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Illuminate\Container\Container->call(Array)
+#8 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Command/Command.php(264): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#9 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(167): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#10 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(869): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(223): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\smsEnvia), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(130): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/psychemedic-nagato/Psy/psyBi/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2017-06-27 16:00:34] local.NOTICE: Inciando processo de envio de sms: 5 pendentes  
+[2017-06-27 16:00:34] local.DEBUG: Numero de celular com menos de 12 caracteres = 1   
+[2017-06-27 16:00:34] local.ERROR: ErrorException: Undefined variable: contentJson in /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositorySms.php:117
+Stack trace:
+#0 /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositorySms.php(117): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Undefined varia...', '/home/psychemed...', 117, Array)
+#1 /home/psychemedic-nagato/Psy/psyBi/app/Console/Commands/smsEnvia.php(54): App\Repository\RepositorySms->sendMessage(Array)
+#2 [internal function]: App\Console\Commands\smsEnvia->handle()
+#3 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#4 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#5 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Illuminate\Foundation\Application), Array, Object(Closure))
+#6 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/Container.php(539): Illuminate\Container\BoundMethod::call(Object(Illuminate\Foundation\Application), Array, Array, NULL)
+#7 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Illuminate\Container\Container->call(Array)
+#8 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Command/Command.php(264): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#9 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(167): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#10 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(869): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(223): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\smsEnvia), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(130): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/psychemedic-nagato/Psy/psyBi/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2017-06-27 16:01:31] local.NOTICE: Inciando processo de envio de sms: 5 pendentes  
+[2017-06-27 16:01:31] local.DEBUG: Numero de celular com menos de 12 caracteres = 1   
+[2017-06-27 16:01:31] local.ERROR: ErrorException: Undefined variable: contentJson in /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositorySms.php:117
+Stack trace:
+#0 /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositorySms.php(117): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Undefined varia...', '/home/psychemed...', 117, Array)
+#1 /home/psychemedic-nagato/Psy/psyBi/app/Console/Commands/smsEnvia.php(54): App\Repository\RepositorySms->sendMessage(Array)
+#2 [internal function]: App\Console\Commands\smsEnvia->handle()
+#3 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#4 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#5 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Illuminate\Foundation\Application), Array, Object(Closure))
+#6 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/Container.php(539): Illuminate\Container\BoundMethod::call(Object(Illuminate\Foundation\Application), Array, Array, NULL)
+#7 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Illuminate\Container\Container->call(Array)
+#8 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Command/Command.php(264): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#9 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(167): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#10 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(869): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(223): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\smsEnvia), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(130): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/psychemedic-nagato/Psy/psyBi/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2017-06-27 16:02:03] local.NOTICE: Inciando processo de envio de sms: 5 pendentes  
+[2017-06-27 16:02:03] local.DEBUG: Numero de celular com menos de 12 caracteres = 1   
+[2017-06-27 16:02:03] local.ERROR: ErrorException: Undefined variable: contentJson in /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositorySms.php:118
+Stack trace:
+#0 /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositorySms.php(118): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Undefined varia...', '/home/psychemed...', 118, Array)
+#1 /home/psychemedic-nagato/Psy/psyBi/app/Console/Commands/smsEnvia.php(54): App\Repository\RepositorySms->sendMessage(Array)
+#2 [internal function]: App\Console\Commands\smsEnvia->handle()
+#3 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#4 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#5 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Illuminate\Foundation\Application), Array, Object(Closure))
+#6 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/Container.php(539): Illuminate\Container\BoundMethod::call(Object(Illuminate\Foundation\Application), Array, Array, NULL)
+#7 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Illuminate\Container\Container->call(Array)
+#8 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Command/Command.php(264): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#9 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(167): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#10 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(869): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(223): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\smsEnvia), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(130): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/psychemedic-nagato/Psy/psyBi/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2017-06-27 16:02:11] local.NOTICE: Inciando processo de envio de sms: 5 pendentes  
+[2017-06-27 16:02:11] local.DEBUG: Numero de celular com menos de 12 caracteres = 1   
+[2017-06-27 16:02:11] local.ERROR: ErrorException: Undefined variable: contentJson in /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositorySms.php:118
+Stack trace:
+#0 /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositorySms.php(118): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Undefined varia...', '/home/psychemed...', 118, Array)
+#1 /home/psychemedic-nagato/Psy/psyBi/app/Console/Commands/smsEnvia.php(54): App\Repository\RepositorySms->sendMessage(Array)
+#2 [internal function]: App\Console\Commands\smsEnvia->handle()
+#3 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#4 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#5 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Illuminate\Foundation\Application), Array, Object(Closure))
+#6 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/Container.php(539): Illuminate\Container\BoundMethod::call(Object(Illuminate\Foundation\Application), Array, Array, NULL)
+#7 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Illuminate\Container\Container->call(Array)
+#8 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Command/Command.php(264): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#9 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(167): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#10 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(869): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(223): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\smsEnvia), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(130): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/psychemedic-nagato/Psy/psyBi/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2017-06-27 16:02:54] local.NOTICE: Inciando processo de envio de sms: 5 pendentes  
+[2017-06-27 16:02:54] local.DEBUG: Numero de celular com menos de 12 caracteres = 1   
+[2017-06-27 16:02:54] local.ERROR: ErrorException: Undefined variable: contentJson in /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositorySms.php:117
+Stack trace:
+#0 /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositorySms.php(117): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Undefined varia...', '/home/psychemed...', 117, Array)
+#1 /home/psychemedic-nagato/Psy/psyBi/app/Console/Commands/smsEnvia.php(54): App\Repository\RepositorySms->sendMessage(Array)
+#2 [internal function]: App\Console\Commands\smsEnvia->handle()
+#3 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#4 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#5 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Illuminate\Foundation\Application), Array, Object(Closure))
+#6 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/Container.php(539): Illuminate\Container\BoundMethod::call(Object(Illuminate\Foundation\Application), Array, Array, NULL)
+#7 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Illuminate\Container\Container->call(Array)
+#8 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Command/Command.php(264): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#9 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(167): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#10 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(869): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(223): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\smsEnvia), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(130): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/psychemedic-nagato/Psy/psyBi/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2017-06-27 16:03:51] local.NOTICE: Inciando processo de envio de sms: 5 pendentes  
+[2017-06-27 16:03:51] local.DEBUG: Numero de celular com menos de 12 caracteres = 1   
+[2017-06-27 16:03:51] local.ERROR: ErrorException: Undefined variable: contentJson in /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositorySms.php:117
+Stack trace:
+#0 /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositorySms.php(117): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Undefined varia...', '/home/psychemed...', 117, Array)
+#1 /home/psychemedic-nagato/Psy/psyBi/app/Console/Commands/smsEnvia.php(54): App\Repository\RepositorySms->sendMessage(Array)
+#2 [internal function]: App\Console\Commands\smsEnvia->handle()
+#3 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#4 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#5 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Illuminate\Foundation\Application), Array, Object(Closure))
+#6 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/Container.php(539): Illuminate\Container\BoundMethod::call(Object(Illuminate\Foundation\Application), Array, Array, NULL)
+#7 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Illuminate\Container\Container->call(Array)
+#8 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Command/Command.php(264): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#9 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(167): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#10 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(869): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(223): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\smsEnvia), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(130): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/psychemedic-nagato/Psy/psyBi/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2017-06-27 16:04:19] local.NOTICE: Inciando processo de envio de sms: 5 pendentes  
+[2017-06-27 16:04:19] local.DEBUG: Numero de celular com menos de 12 caracteres = 1   
+[2017-06-27 16:04:19] local.ERROR: ErrorException: Undefined variable: contentJson in /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositorySms.php:117
+Stack trace:
+#0 /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositorySms.php(117): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Undefined varia...', '/home/psychemed...', 117, Array)
+#1 /home/psychemedic-nagato/Psy/psyBi/app/Console/Commands/smsEnvia.php(54): App\Repository\RepositorySms->sendMessage(Array)
+#2 [internal function]: App\Console\Commands\smsEnvia->handle()
+#3 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#4 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#5 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Illuminate\Foundation\Application), Array, Object(Closure))
+#6 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/Container.php(539): Illuminate\Container\BoundMethod::call(Object(Illuminate\Foundation\Application), Array, Array, NULL)
+#7 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Illuminate\Container\Container->call(Array)
+#8 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Command/Command.php(264): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#9 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(167): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#10 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(869): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(223): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\smsEnvia), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(130): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/psychemedic-nagato/Psy/psyBi/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2017-06-27 16:04:45] local.NOTICE: Inciando processo de envio de sms: 5 pendentes  
+[2017-06-27 16:04:45] local.DEBUG: Numero de celular com menos de 12 caracteres = 1   
+[2017-06-27 16:04:45] local.ERROR: ErrorException: Undefined variable: contentJson in /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositorySms.php:117
+Stack trace:
+#0 /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositorySms.php(117): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Undefined varia...', '/home/psychemed...', 117, Array)
+#1 /home/psychemedic-nagato/Psy/psyBi/app/Console/Commands/smsEnvia.php(54): App\Repository\RepositorySms->sendMessage(Array)
+#2 [internal function]: App\Console\Commands\smsEnvia->handle()
+#3 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#4 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#5 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Illuminate\Foundation\Application), Array, Object(Closure))
+#6 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/Container.php(539): Illuminate\Container\BoundMethod::call(Object(Illuminate\Foundation\Application), Array, Array, NULL)
+#7 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Illuminate\Container\Container->call(Array)
+#8 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Command/Command.php(264): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#9 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(167): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#10 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(869): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(223): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\smsEnvia), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(130): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/psychemedic-nagato/Psy/psyBi/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2017-06-27 16:05:16] local.NOTICE: Inciando processo de envio de sms: 5 pendentes  
+[2017-06-27 16:05:16] local.DEBUG: Numero de celular com menos de 12 caracteres = 1   
+[2017-06-27 16:05:16] local.ERROR: ErrorException: Undefined variable: contentJson in /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositorySms.php:118
+Stack trace:
+#0 /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositorySms.php(118): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Undefined varia...', '/home/psychemed...', 118, Array)
+#1 /home/psychemedic-nagato/Psy/psyBi/app/Console/Commands/smsEnvia.php(54): App\Repository\RepositorySms->sendMessage(Array)
+#2 [internal function]: App\Console\Commands\smsEnvia->handle()
+#3 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#4 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#5 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Illuminate\Foundation\Application), Array, Object(Closure))
+#6 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/Container.php(539): Illuminate\Container\BoundMethod::call(Object(Illuminate\Foundation\Application), Array, Array, NULL)
+#7 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Illuminate\Container\Container->call(Array)
+#8 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Command/Command.php(264): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#9 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(167): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#10 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(869): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(223): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\smsEnvia), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(130): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/psychemedic-nagato/Psy/psyBi/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2017-06-27 16:07:56] local.NOTICE: Inciando processo de envio de sms: 5 pendentes  
+[2017-06-27 16:07:56] local.DEBUG: Numero de celular com menos de 12 caracteres = 1   
+[2017-06-27 16:07:56] local.ERROR: ErrorException: Undefined variable: content in /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositorySms.php:118
+Stack trace:
+#0 /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositorySms.php(118): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Undefined varia...', '/home/psychemed...', 118, Array)
+#1 /home/psychemedic-nagato/Psy/psyBi/app/Console/Commands/smsEnvia.php(54): App\Repository\RepositorySms->sendMessage(Array)
+#2 [internal function]: App\Console\Commands\smsEnvia->handle()
+#3 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#4 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#5 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Illuminate\Foundation\Application), Array, Object(Closure))
+#6 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/Container.php(539): Illuminate\Container\BoundMethod::call(Object(Illuminate\Foundation\Application), Array, Array, NULL)
+#7 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Illuminate\Container\Container->call(Array)
+#8 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Command/Command.php(264): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#9 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(167): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#10 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(869): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(223): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\smsEnvia), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(130): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/psychemedic-nagato/Psy/psyBi/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2017-06-27 16:11:51] local.NOTICE: Inciando processo de envio de sms: 5 pendentes  
+[2017-06-27 16:11:51] local.DEBUG: Numero de celular com menos de 12 caracteres = 1   
+[2017-06-27 16:11:51] local.ERROR: ErrorException: Creating default object from empty value in /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositorySms.php:119
+Stack trace:
+#0 /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositorySms.php(119): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'Creating defaul...', '/home/psychemed...', 119, Array)
+#1 /home/psychemedic-nagato/Psy/psyBi/app/Console/Commands/smsEnvia.php(54): App\Repository\RepositorySms->sendMessage(Array)
+#2 [internal function]: App\Console\Commands\smsEnvia->handle()
+#3 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#4 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#5 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Illuminate\Foundation\Application), Array, Object(Closure))
+#6 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/Container.php(539): Illuminate\Container\BoundMethod::call(Object(Illuminate\Foundation\Application), Array, Array, NULL)
+#7 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Illuminate\Container\Container->call(Array)
+#8 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Command/Command.php(264): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#9 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(167): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#10 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(869): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(223): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\smsEnvia), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(130): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/psychemedic-nagato/Psy/psyBi/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2017-06-27 16:12:00] local.NOTICE: Inciando processo de envio de sms: 5 pendentes  
+[2017-06-27 16:12:00] local.DEBUG: Numero de celular com menos de 12 caracteres = 1   
+[2017-06-27 16:12:00] local.ERROR: ErrorException: Creating default object from empty value in /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositorySms.php:119
+Stack trace:
+#0 /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositorySms.php(119): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'Creating defaul...', '/home/psychemed...', 119, Array)
+#1 /home/psychemedic-nagato/Psy/psyBi/app/Console/Commands/smsEnvia.php(54): App\Repository\RepositorySms->sendMessage(Array)
+#2 [internal function]: App\Console\Commands\smsEnvia->handle()
+#3 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#4 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#5 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Illuminate\Foundation\Application), Array, Object(Closure))
+#6 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/Container.php(539): Illuminate\Container\BoundMethod::call(Object(Illuminate\Foundation\Application), Array, Array, NULL)
+#7 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Illuminate\Container\Container->call(Array)
+#8 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Command/Command.php(264): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#9 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(167): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#10 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(869): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(223): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\smsEnvia), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(130): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/psychemedic-nagato/Psy/psyBi/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2017-06-27 16:14:37] local.NOTICE: Inciando processo de envio de sms: 5 pendentes  
+[2017-06-27 16:14:37] local.DEBUG: Numero de celular com menos de 12 caracteres = 1   
+[2017-06-27 16:14:37] local.WARNING: [INPUT CELULAR SMS]Ocorreu um erro ao envia sms para 5511997975974 - id: 10000001   
+[2017-06-27 16:14:37] local.DEBUG: Numero de celular com menos de 12 caracteres = 1   
+[2017-06-27 16:14:37] local.WARNING: [INPUT CELULAR SMS]Ocorreu um erro ao envia sms para 5511997975974 - id: 10000002   
+[2017-06-27 16:14:37] local.DEBUG: Numero de celular com menos de 12 caracteres = 1   
+[2017-06-27 16:14:37] local.WARNING: [INPUT CELULAR SMS]Ocorreu um erro ao envia sms para 5511997975974 - id: 10000003   
+[2017-06-27 16:14:37] local.DEBUG: Numero de celular com menos de 12 caracteres = 1   
+[2017-06-27 16:14:37] local.WARNING: [INPUT CELULAR SMS]Ocorreu um erro ao envia sms para 5511997975974 - id: 10000004   
+[2017-06-27 16:14:37] local.DEBUG: Numero de celular com menos de 12 caracteres = 1   
+[2017-06-27 16:14:37] local.WARNING: [INPUT CELULAR SMS]Ocorreu um erro ao envia sms para 5511997975974 - id: 10000005   
+[2017-06-27 16:14:37] local.NOTICE: Finalizando o  processo de envio de sms: 5 pendentes  
+[2017-06-27 16:20:17] local.NOTICE: Inciando processo de envio de sms: 5 pendentes  
+[2017-06-27 16:20:17] local.DEBUG: 5511997975974  
+[2017-06-27 16:20:17] local.DEBUG: 1  
+[2017-06-27 16:20:17] local.DEBUG: Numero de celular com menos de 12 caracteres = 1   
+[2017-06-27 16:20:17] local.WARNING: [INPUT CELULAR SMS]Ocorreu um erro ao envia sms para 5511997975974 - id: 10000001   
+[2017-06-27 16:20:17] local.DEBUG: 5511997975974  
+[2017-06-27 16:20:17] local.DEBUG: 1  
+[2017-06-27 16:20:17] local.DEBUG: Numero de celular com menos de 12 caracteres = 1   
+[2017-06-27 16:20:17] local.WARNING: [INPUT CELULAR SMS]Ocorreu um erro ao envia sms para 5511997975974 - id: 10000002   
+[2017-06-27 16:20:17] local.DEBUG: 5511997975974  
+[2017-06-27 16:20:17] local.DEBUG: 1  
+[2017-06-27 16:20:17] local.DEBUG: Numero de celular com menos de 12 caracteres = 1   
+[2017-06-27 16:20:17] local.WARNING: [INPUT CELULAR SMS]Ocorreu um erro ao envia sms para 5511997975974 - id: 10000003   
+[2017-06-27 16:20:17] local.DEBUG: 5511997975974  
+[2017-06-27 16:20:17] local.DEBUG: 1  
+[2017-06-27 16:20:17] local.DEBUG: Numero de celular com menos de 12 caracteres = 1   
+[2017-06-27 16:20:17] local.WARNING: [INPUT CELULAR SMS]Ocorreu um erro ao envia sms para 5511997975974 - id: 10000004   
+[2017-06-27 16:20:17] local.DEBUG: 5511997975974  
+[2017-06-27 16:20:17] local.DEBUG: 1  
+[2017-06-27 16:20:17] local.DEBUG: Numero de celular com menos de 12 caracteres = 1   
+[2017-06-27 16:20:17] local.WARNING: [INPUT CELULAR SMS]Ocorreu um erro ao envia sms para 5511997975974 - id: 10000005   
+[2017-06-27 16:20:17] local.NOTICE: Finalizando o  processo de envio de sms: 5 pendentes  
+[2017-06-27 16:20:38] local.NOTICE: Inciando processo de envio de sms: 5 pendentes  
+[2017-06-27 16:20:38] local.DEBUG: 5511997975974  
+[2017-06-27 16:20:38] local.DEBUG: array (
+  0 => '5511997975974',
+)  
+[2017-06-27 16:20:38] local.DEBUG: Numero de celular com menos de 12 caracteres = 1   
+[2017-06-27 16:20:38] local.WARNING: [INPUT CELULAR SMS]Ocorreu um erro ao envia sms para 5511997975974 - id: 10000001   
+[2017-06-27 16:20:38] local.DEBUG: 5511997975974  
+[2017-06-27 16:20:38] local.DEBUG: array (
+  0 => '5511997975974',
+)  
+[2017-06-27 16:20:38] local.DEBUG: Numero de celular com menos de 12 caracteres = 1   
+[2017-06-27 16:20:38] local.WARNING: [INPUT CELULAR SMS]Ocorreu um erro ao envia sms para 5511997975974 - id: 10000002   
+[2017-06-27 16:20:38] local.DEBUG: 5511997975974  
+[2017-06-27 16:20:38] local.DEBUG: array (
+  0 => '5511997975974',
+)  
+[2017-06-27 16:20:38] local.DEBUG: Numero de celular com menos de 12 caracteres = 1   
+[2017-06-27 16:20:38] local.WARNING: [INPUT CELULAR SMS]Ocorreu um erro ao envia sms para 5511997975974 - id: 10000003   
+[2017-06-27 16:20:38] local.DEBUG: 5511997975974  
+[2017-06-27 16:20:38] local.DEBUG: array (
+  0 => '5511997975974',
+)  
+[2017-06-27 16:20:38] local.DEBUG: Numero de celular com menos de 12 caracteres = 1   
+[2017-06-27 16:20:38] local.WARNING: [INPUT CELULAR SMS]Ocorreu um erro ao envia sms para 5511997975974 - id: 10000004   
+[2017-06-27 16:20:38] local.DEBUG: 5511997975974  
+[2017-06-27 16:20:38] local.DEBUG: array (
+  0 => '5511997975974',
+)  
+[2017-06-27 16:20:38] local.DEBUG: Numero de celular com menos de 12 caracteres = 1   
+[2017-06-27 16:20:38] local.WARNING: [INPUT CELULAR SMS]Ocorreu um erro ao envia sms para 5511997975974 - id: 10000005   
+[2017-06-27 16:20:38] local.NOTICE: Finalizando o  processo de envio de sms: 5 pendentes  
+[2017-06-27 16:22:28] local.NOTICE: Inciando processo de envio de sms: 5 pendentes  
+[2017-06-27 16:22:28] local.DEBUG: 5511997975974/  
+[2017-06-27 16:22:28] local.DEBUG: 5511997975974/  
+[2017-06-27 16:22:28] local.ERROR: [ENVIO SMS] Ocorreu um erro ao envia sms para 5511997975974/ - detalhes = Array to string conversion - File: /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositorySms.php:58  
+[2017-06-27 16:22:28] local.WARNING: [INPUT CELULAR SMS]Ocorreu um erro ao envia sms para 5511997975974 - id: 10000001   
+[2017-06-27 16:22:28] local.DEBUG: 5511997975974/  
+[2017-06-27 16:22:28] local.DEBUG: 5511997975974/  
+[2017-06-27 16:22:28] local.ERROR: [ENVIO SMS] Ocorreu um erro ao envia sms para 5511997975974/ - detalhes = Array to string conversion - File: /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositorySms.php:58  
+[2017-06-27 16:22:28] local.WARNING: [INPUT CELULAR SMS]Ocorreu um erro ao envia sms para 5511997975974 - id: 10000002   
+[2017-06-27 16:22:28] local.DEBUG: 5511997975974/  
+[2017-06-27 16:22:28] local.DEBUG: 5511997975974/  
+[2017-06-27 16:22:28] local.ERROR: [ENVIO SMS] Ocorreu um erro ao envia sms para 5511997975974/ - detalhes = Array to string conversion - File: /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositorySms.php:58  
+[2017-06-27 16:22:28] local.WARNING: [INPUT CELULAR SMS]Ocorreu um erro ao envia sms para 5511997975974 - id: 10000003   
+[2017-06-27 16:22:28] local.DEBUG: 5511997975974/  
+[2017-06-27 16:22:28] local.DEBUG: 5511997975974/  
+[2017-06-27 16:22:28] local.ERROR: [ENVIO SMS] Ocorreu um erro ao envia sms para 5511997975974/ - detalhes = Array to string conversion - File: /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositorySms.php:58  
+[2017-06-27 16:22:28] local.WARNING: [INPUT CELULAR SMS]Ocorreu um erro ao envia sms para 5511997975974 - id: 10000004   
+[2017-06-27 16:22:28] local.DEBUG: 5511997975974/  
+[2017-06-27 16:22:28] local.DEBUG: 5511997975974/  
+[2017-06-27 16:22:28] local.ERROR: [ENVIO SMS] Ocorreu um erro ao envia sms para 5511997975974/ - detalhes = Array to string conversion - File: /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositorySms.php:58  
+[2017-06-27 16:22:28] local.WARNING: [INPUT CELULAR SMS]Ocorreu um erro ao envia sms para 5511997975974 - id: 10000005   
+[2017-06-27 16:22:28] local.NOTICE: Finalizando o  processo de envio de sms: 5 pendentes  
+[2017-06-27 16:24:04] local.NOTICE: Inciando processo de envio de sms: 5 pendentes  
+[2017-06-27 16:24:04] local.DEBUG: 5511997975974/  
+[2017-06-27 16:24:04] local.DEBUG: 5511997975974/  
+[2017-06-27 16:24:04] local.DEBUG: array (
+  'sendSmsRequest' => 
+  array (
+    'to' => '5511997975974/',
+    'schedule' => '',
+    'msg' => 'Você não acessa o painel de inteligencia a 7 dias - 19992105546',
+    'callbackOption' => 'NONE',
+    'id' => 10000001,
+    'aggregateId' => '',
+  ),
+)  
+[2017-06-27 16:24:04] local.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Call to undefined function App\Repository\utf8_encode() in /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositorySms.php:144
+Stack trace:
+#0 /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositorySms.php(141): App\Repository\RepositorySms->utf8ize('5511997975974/')
+#1 /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositorySms.php(141): App\Repository\RepositorySms->utf8ize(Array)
+#2 /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositorySms.php(59): App\Repository\RepositorySms->utf8ize(Array)
+#3 /home/psychemedic-nagato/Psy/psyBi/app/Console/Commands/smsEnvia.php(54): App\Repository\RepositorySms->sendMessage(Array)
+#4 [internal function]: App\Console\Commands\smsEnvia->handle()
+#5 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#6 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#7 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Illuminate\Foundation\Application), Array, Object(Closure))
+#8 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/Container.php(539): Illuminate\Container\BoundMethod::call(Object(Illuminate\Foundation\Application), Array, Array, NULL)
+#9 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Illuminate\Container\Container->call(Array)
+#10 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Command/Command.php(264): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#11 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(167): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#12 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(869): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(223): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\smsEnvia), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(130): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 /home/psychemedic-nagato/Psy/psyBi/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 {main}  
+[2017-06-27 16:24:33] local.NOTICE: Inciando processo de envio de sms: 5 pendentes  
+[2017-06-27 16:24:33] local.DEBUG: 5511997975974/  
+[2017-06-27 16:24:33] local.DEBUG: array (
+  0 => '5511997975974',
+)  
+[2017-06-27 16:24:33] local.DEBUG: array (
+  'sendSmsRequest' => 
+  array (
+    'to' => '5511997975974/',
+    'schedule' => '',
+    'msg' => 'Você não acessa o painel de inteligencia a 7 dias - 19992105546',
+    'callbackOption' => 'NONE',
+    'id' => 10000001,
+    'aggregateId' => '',
+  ),
+)  
+[2017-06-27 16:24:33] local.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Call to undefined function App\Repository\utf8_encode() in /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositorySms.php:144
+Stack trace:
+#0 /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositorySms.php(141): App\Repository\RepositorySms->utf8ize('5511997975974/')
+#1 /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositorySms.php(141): App\Repository\RepositorySms->utf8ize(Array)
+#2 /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositorySms.php(59): App\Repository\RepositorySms->utf8ize(Array)
+#3 /home/psychemedic-nagato/Psy/psyBi/app/Console/Commands/smsEnvia.php(54): App\Repository\RepositorySms->sendMessage(Array)
+#4 [internal function]: App\Console\Commands\smsEnvia->handle()
+#5 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#6 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#7 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Illuminate\Foundation\Application), Array, Object(Closure))
+#8 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/Container.php(539): Illuminate\Container\BoundMethod::call(Object(Illuminate\Foundation\Application), Array, Array, NULL)
+#9 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Illuminate\Container\Container->call(Array)
+#10 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Command/Command.php(264): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#11 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(167): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#12 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(869): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(223): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\smsEnvia), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(130): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 /home/psychemedic-nagato/Psy/psyBi/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 {main}  
+[2017-06-27 16:25:26] local.NOTICE: Inciando processo de envio de sms: 5 pendentes  
+[2017-06-27 16:25:26] local.DEBUG: 5511997975974/  
+[2017-06-27 16:25:26] local.DEBUG: array (
+  0 => '5511997975974',
+)  
+[2017-06-27 16:25:26] local.ERROR: ErrorException: Array to string conversion in /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositorySms.php:117
+Stack trace:
+#0 /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositorySms.php(117): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', '/home/psychemed...', 117, Array)
+#1 /home/psychemedic-nagato/Psy/psyBi/app/Console/Commands/smsEnvia.php(54): App\Repository\RepositorySms->sendMessage(Array)
+#2 [internal function]: App\Console\Commands\smsEnvia->handle()
+#3 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#4 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#5 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Illuminate\Foundation\Application), Array, Object(Closure))
+#6 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/Container.php(539): Illuminate\Container\BoundMethod::call(Object(Illuminate\Foundation\Application), Array, Array, NULL)
+#7 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Illuminate\Container\Container->call(Array)
+#8 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Command/Command.php(264): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#9 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(167): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#10 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(869): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(223): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\smsEnvia), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(130): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/psychemedic-nagato/Psy/psyBi/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2017-06-27 16:25:39] local.NOTICE: Inciando processo de envio de sms: 5 pendentes  
+[2017-06-27 16:25:39] local.DEBUG: 5511997975974/  
+[2017-06-27 16:25:39] local.DEBUG: 5511997975974  
+[2017-06-27 16:25:39] local.DEBUG: array (
+  'sendSmsRequest' => 
+  array (
+    'to' => '5511997975974',
+    'schedule' => '',
+    'msg' => 'Você não acessa o painel de inteligencia a 7 dias - 19992105546',
+    'callbackOption' => 'NONE',
+    'id' => 10000001,
+    'aggregateId' => '',
+  ),
+)  
+[2017-06-27 16:25:39] local.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Call to undefined function App\Repository\utf8_encode() in /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositorySms.php:144
+Stack trace:
+#0 /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositorySms.php(141): App\Repository\RepositorySms->utf8ize('5511997975974')
+#1 /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositorySms.php(141): App\Repository\RepositorySms->utf8ize(Array)
+#2 /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositorySms.php(59): App\Repository\RepositorySms->utf8ize(Array)
+#3 /home/psychemedic-nagato/Psy/psyBi/app/Console/Commands/smsEnvia.php(54): App\Repository\RepositorySms->sendMessage(Array)
+#4 [internal function]: App\Console\Commands\smsEnvia->handle()
+#5 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#6 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#7 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Illuminate\Foundation\Application), Array, Object(Closure))
+#8 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/Container.php(539): Illuminate\Container\BoundMethod::call(Object(Illuminate\Foundation\Application), Array, Array, NULL)
+#9 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Illuminate\Container\Container->call(Array)
+#10 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Command/Command.php(264): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#11 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(167): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#12 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(869): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(223): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\smsEnvia), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(130): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 /home/psychemedic-nagato/Psy/psyBi/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 {main}  
+[2017-06-27 16:26:42] local.NOTICE: Inciando processo de envio de sms: 5 pendentes  
+[2017-06-27 16:26:42] local.DEBUG: 5511997975974/  
+[2017-06-27 16:26:42] local.DEBUG: 5511997975974  
+[2017-06-27 16:26:42] local.DEBUG: array (
+  'sendSmsRequest' => 
+  array (
+    'to' => '5511997975974',
+    'schedule' => '',
+    'msg' => 'Você não acessa o painel de inteligencia a 7 dias - 19992105546',
+    'callbackOption' => 'NONE',
+    'id' => 10000001,
+    'aggregateId' => '',
+  ),
+)  
+[2017-06-27 16:26:42] local.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Call to undefined function utf8_encode() in /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositorySms.php:144
+Stack trace:
+#0 /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositorySms.php(141): App\Repository\RepositorySms->utf8ize('5511997975974')
+#1 /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositorySms.php(141): App\Repository\RepositorySms->utf8ize(Array)
+#2 /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositorySms.php(59): App\Repository\RepositorySms->utf8ize(Array)
+#3 /home/psychemedic-nagato/Psy/psyBi/app/Console/Commands/smsEnvia.php(54): App\Repository\RepositorySms->sendMessage(Array)
+#4 [internal function]: App\Console\Commands\smsEnvia->handle()
+#5 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#6 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#7 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Illuminate\Foundation\Application), Array, Object(Closure))
+#8 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/Container.php(539): Illuminate\Container\BoundMethod::call(Object(Illuminate\Foundation\Application), Array, Array, NULL)
+#9 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Illuminate\Container\Container->call(Array)
+#10 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Command/Command.php(264): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#11 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(167): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#12 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(869): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(223): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\smsEnvia), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(130): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 /home/psychemedic-nagato/Psy/psyBi/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 {main}  
+[2017-06-27 16:27:05] local.NOTICE: Inciando processo de envio de sms: 5 pendentes  
+[2017-06-27 16:27:05] local.DEBUG: 5511997975974/  
+[2017-06-27 16:27:05] local.DEBUG: 5511997975974  
+[2017-06-27 16:27:05] local.DEBUG: array (
+  'sendSmsRequest' => 
+  array (
+    'to' => '5511997975974',
+    'schedule' => '',
+    'msg' => 'Você não acessa o painel de inteligencia a 7 dias - 19992105546',
+    'callbackOption' => 'NONE',
+    'id' => 10000001,
+    'aggregateId' => '',
+  ),
+)  
+[2017-06-27 16:27:05] local.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Call to undefined function App\Repository\utf8_encode() in /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositorySms.php:144
+Stack trace:
+#0 /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositorySms.php(141): App\Repository\RepositorySms->utf8ize('5511997975974')
+#1 /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositorySms.php(141): App\Repository\RepositorySms->utf8ize(Array)
+#2 /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositorySms.php(59): App\Repository\RepositorySms->utf8ize(Array)
+#3 /home/psychemedic-nagato/Psy/psyBi/app/Console/Commands/smsEnvia.php(54): App\Repository\RepositorySms->sendMessage(Array)
+#4 [internal function]: App\Console\Commands\smsEnvia->handle()
+#5 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#6 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#7 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Illuminate\Foundation\Application), Array, Object(Closure))
+#8 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/Container.php(539): Illuminate\Container\BoundMethod::call(Object(Illuminate\Foundation\Application), Array, Array, NULL)
+#9 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Illuminate\Container\Container->call(Array)
+#10 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Command/Command.php(264): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#11 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(167): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#12 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(869): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(223): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\smsEnvia), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(130): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 /home/psychemedic-nagato/Psy/psyBi/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 {main}  
+[2017-06-27 16:27:49] local.NOTICE: Inciando processo de envio de sms: 5 pendentes  
+[2017-06-27 16:27:49] local.DEBUG: 5511997975974/  
+[2017-06-27 16:27:49] local.DEBUG: 5511997975974  
+[2017-06-27 16:27:49] local.DEBUG: array (
+  'sendSmsRequest' => 
+  array (
+    'to' => '5511997975974',
+    'schedule' => '',
+    'msg' => 'Você não acessa o painel de inteligencia a 7 dias - 19992105546',
+    'callbackOption' => 'NONE',
+    'id' => 10000001,
+    'aggregateId' => '',
+  ),
+)  
+[2017-06-27 16:27:49] local.DEBUG: {"sendSmsRequest":{"to":"5511997975974","schedule":"","msg":"Voc\u00ea n\u00e3o acessa o painel de inteligencia a 7 dias - 19992105546","callbackOption":"NONE","id":10000001,"aggregateId":""}}  
+[2017-06-27 16:27:49] local.DEBUG: Base Auth cHN5Y2hlbWVkaWNzOklQeVd4MW5aZnE=  
+[2017-06-27 16:27:50] local.DEBUG: response {
+  "sendSmsResponse" : {
+    "statusCode" : "00",
+    "statusDescription" : "Ok",
+    "detailCode" : "000",
+    "detailDescription" : "Message Sent"
+  }
+}  
+[2017-06-27 16:27:50] local.ERROR: PDOException: SQLSTATE[42000]: Syntax error or access violation: 1142 UPDATE command denied to user 'wellington'@'177.102.141.170' for table 'sms_enviar' in /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php:470
+Stack trace:
+#0 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(470): PDO->prepare('update `sms_env...')
+#1 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(640): Illuminate\Database\Connection->Illuminate\Database\{closure}('update `sms_env...', Array)
+#2 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(607): Illuminate\Database\Connection->runQueryCallback('update `sms_env...', Array, Object(Closure))
+#3 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(477): Illuminate\Database\Connection->run('update `sms_env...', Array, Object(Closure))
+#4 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(416): Illuminate\Database\Connection->affectingStatement('update `sms_env...', Array)
+#5 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2152): Illuminate\Database\Connection->update('update `sms_env...', Array)
+#6 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(759): Illuminate\Database\Query\Builder->update(Array)
+#7 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(591): Illuminate\Database\Eloquent\Builder->update(Array)
+#8 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(511): Illuminate\Database\Eloquent\Model->performUpdate(Object(Illuminate\Database\Eloquent\Builder))
+#9 /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositorySms.php(125): Illuminate\Database\Eloquent\Model->save()
+#10 /home/psychemedic-nagato/Psy/psyBi/app/Console/Commands/smsEnvia.php(54): App\Repository\RepositorySms->sendMessage(Array)
+#11 [internal function]: App\Console\Commands\smsEnvia->handle()
+#12 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#13 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#14 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Illuminate\Foundation\Application), Array, Object(Closure))
+#15 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/Container.php(539): Illuminate\Container\BoundMethod::call(Object(Illuminate\Foundation\Application), Array, Array, NULL)
+#16 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Illuminate\Container\Container->call(Array)
+#17 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Command/Command.php(264): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#18 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(167): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#19 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(869): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(223): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\smsEnvia), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(130): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#22 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#23 /home/psychemedic-nagato/Psy/psyBi/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#24 {main}
+
+Next Illuminate\Database\QueryException: SQLSTATE[42000]: Syntax error or access violation: 1142 UPDATE command denied to user 'wellington'@'177.102.141.170' for table 'sms_enviar' (SQL: update `sms_enviar` set `SmsEnviarDataEnvio` = 2017-06-27 16:06:50, `SmsEnviarStatus` = E where `SmsEnviarAuto` = 10000001) in /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php:647
+Stack trace:
+#0 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(607): Illuminate\Database\Connection->runQueryCallback('update `sms_env...', Array, Object(Closure))
+#1 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(477): Illuminate\Database\Connection->run('update `sms_env...', Array, Object(Closure))
+#2 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(416): Illuminate\Database\Connection->affectingStatement('update `sms_env...', Array)
+#3 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2152): Illuminate\Database\Connection->update('update `sms_env...', Array)
+#4 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(759): Illuminate\Database\Query\Builder->update(Array)
+#5 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(591): Illuminate\Database\Eloquent\Builder->update(Array)
+#6 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(511): Illuminate\Database\Eloquent\Model->performUpdate(Object(Illuminate\Database\Eloquent\Builder))
+#7 /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositorySms.php(125): Illuminate\Database\Eloquent\Model->save()
+#8 /home/psychemedic-nagato/Psy/psyBi/app/Console/Commands/smsEnvia.php(54): App\Repository\RepositorySms->sendMessage(Array)
+#9 [internal function]: App\Console\Commands\smsEnvia->handle()
+#10 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#11 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#12 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Illuminate\Foundation\Application), Array, Object(Closure))
+#13 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/Container.php(539): Illuminate\Container\BoundMethod::call(Object(Illuminate\Foundation\Application), Array, Array, NULL)
+#14 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Illuminate\Container\Container->call(Array)
+#15 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Command/Command.php(264): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#16 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(167): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#17 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(869): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(223): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\smsEnvia), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(130): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 /home/psychemedic-nagato/Psy/psyBi/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#22 {main}  
+[2017-06-27 16:32:28] local.NOTICE: Inciando processo de envio de sms: 5 pendentes  
+[2017-06-27 16:32:28] local.DEBUG: 5511997975974/  
+[2017-06-27 16:32:28] local.DEBUG: 5511997975974  
+[2017-06-27 16:32:28] local.DEBUG: array (
+  'sendSmsRequest' => 
+  array (
+    'to' => '5511997975974',
+    'schedule' => '',
+    'msg' => 'Você não acessa o painel de inteligencia a 7 dias - 19992105546',
+    'callbackOption' => 'NONE',
+    'id' => 10000001,
+    'aggregateId' => '',
+  ),
+)  
+[2017-06-27 16:32:28] local.DEBUG: {"sendSmsRequest":{"to":"5511997975974","schedule":"","msg":"Voc\u00c3\u00aa n\u00c3\u00a3o acessa o painel de inteligencia a 7 dias - 19992105546","callbackOption":"NONE","id":10000001,"aggregateId":""}}  
+[2017-06-27 16:32:28] local.DEBUG: Base Auth cHN5Y2hlbWVkaWNzOklQeVd4MW5aZnE=  
+[2017-06-27 16:32:28] local.DEBUG: response {
+  "sendSmsResponse" : {
+    "statusCode" : "10",
+    "statusDescription" : "Error",
+    "detailCode" : "080",
+    "detailDescription" : "Message with same ID already sent"
+  }
+}  
+[2017-06-27 16:32:28] local.ERROR: [ENVIO SMS] Ocorreu um erro ao envia sms para 5511997975974 - detalhes = Erro ao enviar SMS para 5511997975974 - codigo do erro 10 - description: Message with same ID already sent - response {
+  "sendSmsResponse" : {
+    "statusCode" : "10",
+    "statusDescription" : "Error",
+    "detailCode" : "080",
+    "detailDescription" : "Message with same ID already sent"
+  }
+} - File: /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositorySms.php:102  
+[2017-06-27 16:32:28] local.ERROR: PDOException: SQLSTATE[42000]: Syntax error or access violation: 1142 UPDATE command denied to user 'wellington'@'177.102.141.170' for table 'sms_enviar' in /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php:470
+Stack trace:
+#0 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(470): PDO->prepare('update `sms_env...')
+#1 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(640): Illuminate\Database\Connection->Illuminate\Database\{closure}('update `sms_env...', Array)
+#2 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(607): Illuminate\Database\Connection->runQueryCallback('update `sms_env...', Array, Object(Closure))
+#3 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(477): Illuminate\Database\Connection->run('update `sms_env...', Array, Object(Closure))
+#4 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(416): Illuminate\Database\Connection->affectingStatement('update `sms_env...', Array)
+#5 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2152): Illuminate\Database\Connection->update('update `sms_env...', Array)
+#6 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(759): Illuminate\Database\Query\Builder->update(Array)
+#7 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(591): Illuminate\Database\Eloquent\Builder->update(Array)
+#8 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(511): Illuminate\Database\Eloquent\Model->performUpdate(Object(Illuminate\Database\Eloquent\Builder))
+#9 /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositorySms.php(125): Illuminate\Database\Eloquent\Model->save()
+#10 /home/psychemedic-nagato/Psy/psyBi/app/Console/Commands/smsEnvia.php(54): App\Repository\RepositorySms->sendMessage(Array)
+#11 [internal function]: App\Console\Commands\smsEnvia->handle()
+#12 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#13 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#14 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Illuminate\Foundation\Application), Array, Object(Closure))
+#15 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/Container.php(539): Illuminate\Container\BoundMethod::call(Object(Illuminate\Foundation\Application), Array, Array, NULL)
+#16 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Illuminate\Container\Container->call(Array)
+#17 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Command/Command.php(264): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#18 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(167): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#19 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(869): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(223): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\smsEnvia), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(130): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#22 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#23 /home/psychemedic-nagato/Psy/psyBi/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#24 {main}
+
+Next Illuminate\Database\QueryException: SQLSTATE[42000]: Syntax error or access violation: 1142 UPDATE command denied to user 'wellington'@'177.102.141.170' for table 'sms_enviar' (SQL: update `sms_enviar` set `SmsEnviarDataEnvio` = 2017-06-27 16:06:28, `SmsEnviarStatus` = F where `SmsEnviarAuto` = 10000001) in /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php:647
+Stack trace:
+#0 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(607): Illuminate\Database\Connection->runQueryCallback('update `sms_env...', Array, Object(Closure))
+#1 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(477): Illuminate\Database\Connection->run('update `sms_env...', Array, Object(Closure))
+#2 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Connection.php(416): Illuminate\Database\Connection->affectingStatement('update `sms_env...', Array)
+#3 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2152): Illuminate\Database\Connection->update('update `sms_env...', Array)
+#4 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(759): Illuminate\Database\Query\Builder->update(Array)
+#5 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(591): Illuminate\Database\Eloquent\Builder->update(Array)
+#6 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(511): Illuminate\Database\Eloquent\Model->performUpdate(Object(Illuminate\Database\Eloquent\Builder))
+#7 /home/psychemedic-nagato/Psy/psyBi/app/Repository/RepositorySms.php(125): Illuminate\Database\Eloquent\Model->save()
+#8 /home/psychemedic-nagato/Psy/psyBi/app/Console/Commands/smsEnvia.php(54): App\Repository\RepositorySms->sendMessage(Array)
+#9 [internal function]: App\Console\Commands\smsEnvia->handle()
+#10 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#11 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#12 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Illuminate\Foundation\Application), Array, Object(Closure))
+#13 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Container/Container.php(539): Illuminate\Container\BoundMethod::call(Object(Illuminate\Foundation\Application), Array, Array, NULL)
+#14 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Illuminate\Container\Container->call(Array)
+#15 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Command/Command.php(264): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#16 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Console/Command.php(167): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#17 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(869): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(223): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\smsEnvia), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 /home/psychemedic-nagato/Psy/psyBi/vendor/symfony/console/Application.php(130): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 /home/psychemedic-nagato/Psy/psyBi/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 /home/psychemedic-nagato/Psy/psyBi/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#22 {main}  
